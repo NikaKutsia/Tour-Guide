@@ -1,0 +1,327 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base Styles & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utility Classes */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-light {
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #cf3b2b;
+    color: whitesmoke;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #c0392b;
+}
+
+.btn-dark {
+    background: #2c3e50;
+}
+
+.btn-dark:hover {
+    background: #1a252f;
+}
+
+/* Navigation */
+nav {
+    background: whitesmoke;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #cf3b2b;
+    text-decoration: none;
+}
+
+.logo::before {
+    content: "";
+    display: inline-block;
+    width: 32px; 
+    height: 32px;
+    margin-right: 10px;
+    
+    /* Dark red grape icon PNG */
+    background-image: url('https://img.icons8.com/color/96/grapes.png');
+    
+    /* This filter turns the standard purple grapes into a dark wine red */
+    filter: hue-rotate(90deg) brightness(0.5) saturate(1.5);
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* About Section */
+.intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F81%2F36%2F8xADqj.jpg&f=1&nofb=1&ipt=e60f09c217728d5e73aa0057030a599d0392901c634e9c790ad4ed74d4888a8a') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.intro-banner {
+    background: #e74c3c;
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.intro h1 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+/* Who Am I / Intro */
+.about-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-box {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 30px;
+    border-left: 4px solid #e74c3c;
+}
+
+.about-profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 50%; /* Makes it a circle */
+    border: 4px solid #f0f0f0; /* Optional: adds a border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Reviews */
+.reviews {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.test-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.stars { 
+    color: #f1c40f; 
+    margin-bottom: 10px; 
+}
+
+/* Storyteller Pitch */
+.pitch {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tours */
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tour-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tour-img {
+    height: 200px;
+    background: #ccc;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tour-content {
+    padding: 20px;
+}
+
+.tour-content h3 {
+    margin-top: 0;
+}
+
+.read-more {
+    color: #e74c3c;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #c0392b;
+}
+
+/* Safety / Certification */
+.safety {
+    background: #ecf0f1;
+    padding: 60px 20px;
+}
+
+/* Footer */
+footer {
+    background: #1a252f;
+    color: #bdc3c7;
+    padding: 50px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 30px;
+}
+
+.footer-grid h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-grid ul li {
+    margin-bottom: 10px;
+}
+
+.footer-grid a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+}
