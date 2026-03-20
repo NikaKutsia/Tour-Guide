@@ -310,12 +310,6 @@ footer {
     color: #fff;
 }
 
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 14px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .intro-section {
