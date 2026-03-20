@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -310,12 +314,60 @@ footer {
     color: #fff;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for Mobile */
 @media (max-width: 768px) {
-    .intro-section {
+    /* 1. Stack the navigation items */
+    .nav-container {
         flex-direction: column;
+        gap: 15px;
     }
-    .hero h1 {
-        font-size: 36px;
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .logo {
+        font-size: 20px; /* Slightly smaller logo for small screens */
+    }
+
+    /* 2. Resize the Intro/Hero section */
+    .intro {
+        padding: 60px 15px; /* Less tall on mobile */
+    }
+    .intro h1 {
+        font-size: 32px; /* Fixed class target */
+        margin-bottom: 15px;
+    }
+    .intro p {
+        font-size: 16px;
+    }
+
+    /* 3. Stack the About section */
+    .about-section {
+        flex-direction: column; /* Changes from side-by-side to stacked */
+        align-items: center;
+        text-align: center; /* Centers the text when stacked */
+        gap: 20px;
+    }
+    .about-box {
+        border-left: none; /* Remove left border on mobile */
+        border-top: 4px solid #e74c3c; /* Move border to the top */
+        padding: 20px 15px;
+    }
+
+    /* 4. Fix Grid layouts for narrow screens (like iPhone SE) */
+    .test-grid, .tours-grid {
+        grid-template-columns: 1fr; /* Forces a single column on mobile */
+        gap: 20px;
+    }
+
+    /* 5. General container adjustments */
+    .container {
+        width: 92%; /* Gives a little more breathing room on the edges */
+        padding: 30px 0;
+    }
+    
+    .footer-grid {
+        text-align: center; /* Center footer links on mobile */
     }
 }
