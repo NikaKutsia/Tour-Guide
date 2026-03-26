@@ -31,7 +31,7 @@ const translations = {
         "tour5_p": "Marvellous as our capital city is, a trip out to this ancient rock-hewn town makes you appreciate how our deep Island-like story unfolded in the rocks...",
         "tour6_h3": "Highs of Gudauri",
         "tour6_p": "Experience the breathtaking landscapes of Gudauri, a hidden gem in the Georgian mountains. From skiing to hiking, this region offers endless adventures for nature lovers.",
-        "book_btn": "Book on GoTrip »",
+        "book_btn": "Book »",
         // Safety & Footer
         "safe_h2": "Certified, Safe & Good to Go",
         "safe_p": "I am looking forward to welcoming visitors here to Georgia. My national tourism certification is key to ensuring you travel safely and comfortably across our beautiful regions.",
@@ -84,23 +84,19 @@ const translations = {
 };
 
 function changeLanguage(lang) {
-    // Find all elements with a data-key attribute
     const elements = document.querySelectorAll('[data-key]');
 
     elements.forEach(element => {
         const key = element.getAttribute('data-key');
         if (translations[lang][key]) {
-            // Use innerHTML if you have <br> tags, otherwise textContent is safer
             element.innerHTML = translations[lang][key];
         }
     });
 
-    // Save choice to browser memory
     localStorage.setItem('preferredLanguage', lang);
     document.documentElement.lang = lang;
 }
 
-// Run this when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     changeLanguage(savedLang);
