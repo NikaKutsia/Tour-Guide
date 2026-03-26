@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours in Georgia | Giorgi Kutsia</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Personal Tour Guide</title>
 </head>
 <body>
 
@@ -13,137 +13,117 @@
             <a href="/" class="logo">Tours in Georgia</a>
 
             <ul class="nav-links">
-                <li><a href="#tours">Tours</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#tours" data-key="nav_tours">Tours</a></li>
+                <li><a href="#about" data-key="nav_about">About</a></li>
+                <li><a href="#reviews" data-key="nav_reviews">Reviews</a></li>
+                <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                <li class="lang-switcher">
+                    <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+                    <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
+                </li>
             </ul>
         </div>
     </nav>
 
     <section class="intro">
-        <h1>Ready to Explore the Pearl of the Caucasus?</h1>
-        <p>Georgia is famous for its rich history and stunning landscapes, making it an ideal destination to start exploring ancient sites, delve into our rich highland story, and discover wondrous hospitality. Let your Georgian adventure begin with me!</p>
-        <a href="#tours" class="btn">View My Tours</a>
+        <h1 data-key="intro_h1">Ready to Explore the Pearl of the Caucasus?</h1>
+        <p data-key="intro_p">Georgia is famous for its rich history and stunning landscapes, making it an ideal destination to start exploring ancient sites, delve into our rich highland story, and discover wondrous hospitality. Let your Georgian adventure begin with me!</p>
+        <a href="#tours" class="btn" data-key="intro_btn">View My Tours</a>
     </section>
 
     <div id="about" class="container about-section">
         <div class="about-box">
-            <h2>Who Am I?</h2>
-            <p>My name is Giorgi Kutsia. I'm a Certified National Tourist Guide in Georgia, a qualification that guarantees deep historical knowledge and safety, and I am fully equipped to take you anywhere from the winding streets of Old Tbilisi to the majestic peaks of Bakuriani. I primarily conduct tours in Russian, however, I can also communicate in English.</p>
+            <h2 data-key="about_h2_who">Who Am I?</h2>
+            <p data-key="about_p_who">My name is Giorgi Kutsia. I'm a Certified National Tourist Guide in Georgia, a qualification that guarantees deep historical knowledge and safety, and I am fully equipped to take you anywhere from the winding streets of Old Tbilisi to the majestic peaks of Bakuriani. I primarily conduct tours in Russian, however, I can also communicate in English.</p>
         </div>
 
         <div class="about-profile-pic">
-        <img src="./profile.jpg" alt="National Tourist Guide Georgia" class="profile-img">
-    </div>
+            <img src="./profile.jpg" alt="National Tourist Guide Georgia" class="profile-img">
+        </div>
 
         <div class="about-box">
-            <h2>Why Choose Me?</h2>
-            <p>Check the reviews below to find out! Long story short, I ensure your stay in Georgia is nothing short of magical.</p>
-            <br>
+            <h2 data-key="about_h2_why">Why Choose Me?</h2>
+            <p data-key="about_p_why">Check the reviews below to find out! Long story short, I ensure your stay in Georgia is nothing short of magical.</p>
         </div>
     </div>
 
     <section id="reviews" class="reviews">
         <div class="container">
-            <h2 class="text-light">How Others See Me</h2>
+            <h2 class="text-light" data-key="rev_h2">How Others See Me</h2>
             <div class="test-grid">
                 <div class="test-card">
                     <div class="stars">★★★★★</div>
                     <strong>Михаил К</strong>
-                    <p>"Спокойный, аккуратный, выдержанный водитель. Комфортная машина. Всё очень понравилось! Нас было двое взрослых и трое детей – ехали из Тбилиси в Кутаиси, по дороге заехали в Гори (этот город мы указали как промежуточный пункт при бронировании). Георгий заранее приехал за нами в отель. Водит аккуратно. Машина чистая, кондиционер работает – у него отдельные регуляторы, что удобно. Для всех пассажиров есть бутылки с водой (кстати, вода очень вкусная). Георгий делает остановки по запросу, ждёт столько, сколько нужно – цена от этого не меняется. Например, можно остановиться перекусить. По деньгам всё как на сайте. Георгий спокойный и выдержанный. Не курит. Что касается навязчивой музыки – не переживайте. Всем рекомендую, мы остались очень довольны!"</p>
+                    <p data-key="rev_1">"Спокойный, аккуратный, выдержанный водитель. Комфортная машина. Всё очень понравилось! Нас было двое взрослых и трое детей – ехали из Тбилиси в Кутаиси..."</p>
                 </div>
                 <div class="test-card">
                     <div class="stars">★★★★★</div>
                     <strong>Maria</strong>
-                    <p>"Быстро, безопасно и весело! Мы думали, что просто забронируем трансфер, но в итоге отлично провели время — экскурсия и несколько интересных историй! Просто фантастика!"</p>
+                    <p data-key="rev_2">"Быстро, безопасно и весело! Мы думали, что просто забронируем трансфер, но в итоге отлично провели время — экскурсия и несколько интересных историй!"</p>
                 </div>
                 <div class="test-card">
                     <div class="stars">★★★★★</div>
                     <strong>Evgeniy Shmerko</strong>
-                    <p>"We traveled with Giorgi from Stepansminda to Tbilisi and had an excellent experience. From the very beginning, everything was perfectly organized, on time, and very comfortable. Giorgi is not only a safe and reliable driver – we felt completely at ease the whole way – but also an amazing source of knowledge. He shared with us so much information about the places we passed, the history of Georgia, and many other fascinating details. It truly felt like traveling with both a driver and a tour guide at the same time. We really enjoyed the journey and highly recommend Giorgi to anyone looking for a professional, friendly, and knowledgeable driver in Georgia."</p>
+                    <p data-key="rev_3">"We traveled with Giorgi from Stepansminda to Tbilisi and had an excellent experience. Giorgi is not only a safe and reliable driver but also an amazing source of knowledge..."</p>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="tours" class="container">
-        <h2 class="text-center">My Tours</h2>
-        <p class="text-center">Here's a few tasters of what you get on a tour with me. If you don't see what you're looking for here, get in touch and I'll organise it for you.</p>
+        <h2 class="text-center" data-key="tours_h2">My Tours</h2>
+        <p class="text-center" data-key="tours_p">Here's a few tasters of what you get on a tour with me. If you don't see what you're looking for here, get in touch and I'll organise it for you.</p>
         
         <div class="tours-grid">
             <div class="tour-card">
                 <div class="tour-content">
-                    <h3>Old Tbilisi Wonders</h3>
-                    <p>Foodies, architecture fans and historians: there's something for everyone in the colorful sulfur bath district and winding alleys of our capital city...</p>
-                    <a href="#" class="read-more">Book on GoTrip »</a>
+                    <h3 data-key="tour1_h3">Old Tbilisi Wonders</h3>
+                    <p data-key="tour1_p">Foodies, architecture fans and historians: there's something for everyone in the colorful sulfur bath district and winding alleys of our capital city...</p>
+                    <a href="#" class="read-more" data-key="book_btn">Book »</a>
                 </div>
             </div>
             <div class="tour-card">
                 <div class="tour-content">
-                    <h3>Mystical Mtskheta</h3>
-                    <p>The beginning of our ancient nation as we know it. a place where pagan traditions met Christianity at the confluence of two rivers...</p>
-                    <a href="#" class="read-more">Book on GoTrip »</a>
+                    <h3 data-key="tour2_h3">Mystical Mtskheta</h3>
+                    <p data-key="tour2_p">The beginning of our ancient nation as we know it. a place where pagan traditions met Christianity at the confluence of two rivers...</p>
+                    <a href="#" class="read-more" data-key="book_btn">Book »</a>
                 </div>
             </div>
             <div class="tour-card">
                 <div class="tour-content">
-                    <h3>Royal Kakheti Wine Tour</h3>
-                    <p>Hurrah for 8,000 years of viticulture! A tour of the Kakheti region shows you how deep-rooted our winemaking and royal traditions truly are...</p>
-                    <a href="#" class="read-more">Book on GoTrip »</a>
-                </div>
-            </div>
-            <div class="tour-card">
-                <div class="tour-content">
-                    <h3>The Georgian Military Highway</h3>
-                    <p>The mountainous highway of the Caucasus. Come with me on a tour to discover the stunning peaks of Kazbegi and Gergeti Trinity Church...</p>
-                    <a href="#" class="read-more">Book on GoTrip »</a>
-                </div>
-            </div>
-            <div class="tour-card">
-                <div class="tour-content">
-                    <h3>Uplistsikhe Cave Town</h3>
-                    <p>Marvellous as our capital city is, a trip out to this ancient rock-hewn town makes you appreciate how our deep Island-like story unfolded in the rocks...</p>
-                    <a href="#" class="read-more">Book on GoTrip »</a>
-                </div>
-            </div>
-            <div class="tour-card">
-                <div class="tour-content">
-                    <h3>Highs of Gudauri</h3>
-                    <p>Experience the breathtaking landscapes of Gudauri, a hidden gem in the Georgian mountains. From skiing to hiking, this region offers endless adventures for nature lovers.</p>
-                    <a href="#" class="read-more">Book on GoTrip »</a>
+                    <h3 data-key="tour3_h3">Royal Kakheti Wine Tour</h3>
+                    <p data-key="tour3_p">Hurrah for 8,000 years of viticulture! A tour of the Kakheti region shows you how deep-rooted our winemaking and royal traditions truly are...</p>
+                    <a href="#" class="read-more" data-key="book_btn">Book »</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="container safety text-center">
-        <h2>Certified, Safe & Good to Go</h2>
-        <p>I am looking forward to welcoming visitors here to Georgia. My national tourism certification is key to ensuring you travel safely and comfortably across our beautiful regions.</p>
-        <a href="#" class="btn btn-dark">Read Statement</a>
+        <h2 data-key="safe_h2">Certified, Safe & Good to Go</h2>
+        <p data-key="safe_p">I am looking forward to welcoming visitors here to Georgia. My national tourism certification is key to ensuring you travel safely and comfortably across our beautiful regions.</p>
+        <a href="#" class="btn btn-dark" data-key="safe_btn">Read Statement</a>
     </section>
 
     <footer>
-        <div id ="contact"class="footer-grid">
+        <div id="contact" class="footer-grid">
             <div>
-                <h4>Useful Links</h4>
+                <h4 data-key="footer_links">Useful Links</h4>
                 <ul>
-                    <li><a href="#tours">Tours</a></li>
-                    <li><a href="#">My Credentials</a></li>
+                    <li><a href="#tours" data-key="nav_tours">Tours</a></li>
                     <li><a href="https://ttc.com.ge/en/tariff/49" target="_blank">Metro/Transport Card</a></li>
                 </ul>
             </div>
             <div>
-                <h4>Contact Me</h4>
+                <h4 data-key="footer_contact">Contact Me</h4>
                 <ul>
-                    <li></li>
-                    <li><a href="https://wa.me/9955575757" target="_blank">WhatsApp</a></li>
-                    <li><a href="https://www.instagram.com/travel.gk.georgia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></li>
+                    <li><a href="https://wa.me/995557575770" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/travel.gk.georgia" target="_blank">Instagram</a></li>
                 </ul>
             </div>
-
         </div>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
